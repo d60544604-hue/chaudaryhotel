@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chaudary Hotel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">🍽️ Chaudary <span>Hotel</span></div>
+  <nav id="menuLinks">
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reserve">Reserve</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="burger" id="burger">☰</button>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Taste the Best at <span>Chaudary Hotel</span></h1>
+    <p>Fresh flavors, warm hospitality, unforgettable meals.</p>
+    <a href="#reserve" class="btn">Book a Table</a>
+    <a href="#menu" class="btn btn-alt">View Menu</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="card c1">🔥<h3>Fresh & Hot</h3><p>Cooked to order</p></div>
+  <div class="card c2">⭐<h3>Top Quality</h3><p>Best ingredients</p></div>
+  <div class="card c3">🚚<h3>Fast Delivery</h3><p>At your door</p></div>
+  <div class="card c4">👨‍🍳<h3>Expert Chefs</h3><p>Years of taste</p></div>
+</section>
+
+<section class="section" id="menu">
+  <h2>Our Menu</h2>
+  <div class="filters">
+    <button class="filter active" data-cat="all">All</button>
+    <button class="filter" data-cat="main">Main</button>
+    <button class="filter" data-cat="fast">Fast Food</button>
+    <button class="filter" data-cat="fresh">Fresh</button>
+    <button class="filter" data-cat="sweet">Sweet</button>
+  </div>
+  <div class="menu-grid">
+    <div class="dish" data-cat="main">
+      <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600" alt="Biryani">
+      <div class="info"><h3>Chicken Biryani</h3><p>Spiced rice with tender chicken</p><b>Rs. 650</b></div>
+    </div>
+    <div class="dish" data-cat="fast">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Pizza">
+      <div class="info"><h3>Cheese Pizza</h3><p>Loaded with melted cheese</p><b>Rs. 1200</b></div>
+    </div>
+    <div class="dish" data-cat="main">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="Steak">
+      <div class="info"><h3>Grilled Steak</h3><p>Juicy, flame grilled</p><b>Rs. 1800</b></div>
+    </div>
+    <div class="dish" data-cat="fresh">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600" alt="Salad">
+      <div class="info"><h3>Fresh Salad Bowl</h3><p>Crunchy veggies, light dressing</p><b>Rs. 450</b></div>
+    </div>
+    <div class="dish" data-cat="sweet">
+      <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600" alt="Pancakes">
+      <div class="info"><h3>Honey Pancakes</h3><p>Fluffy with berries</p><b>Rs. 550</b></div>
+    </div>
+    <div class="dish" data-cat="fast">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Burger">
+      <div class="info"><h3>Beef Burger</h3><p>Double patty, special sauce</p><b>Rs. 750</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery-sec" id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Dining hall">
+    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Restaurant interior">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600" alt="Fine dining">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" alt="Delicious plate">
+  </div>
+</section>
+
+<section class="section reserve" id="reserve">
+  <h2>Reserve a Table</h2>
+  <div class="form">
+    <input type="text" id="rName" placeholder="Your name">
+    <input type="tel" id="rPhone" placeholder="Phone number">
+    <input type="date" id="rDate">
+    <select id="rGuests">
+      <option value="2">2 Guests</option>
+      <option value="4">4 Guests</option>
+      <option value="6">6 Guests</option>
+      <option value="10">10+ Guests</option>
+    </select>
+    <button class="btn" id="rBtn">Confirm Booking</button>
+    <p id="rMsg"></p>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>Chaudary Hotel</h2>
+  <p>📍 Main Road, Your City &nbsp; | &nbsp; 📞 +92 300 0000000</p>
+  <p>🕒 Open daily: 11:00 AM – 12:00 AM</p>
+  <small>© 2026 Chaudary Hotel. All rights reserved.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+:root{
+  --red:#d62828; --orange:#f77f00; --gold:#fcbf49; --cream:#fff8ec;
+  --green:#2a9d8f; --dark:#3a0d0d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:#333}
+
+.nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;
+  align-items:center;padding:14px 5%;background:linear-gradient(90deg,var(--red),var(--orange));
+  box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.logo{color:#fff;font-size:1.5rem;font-weight:800}
+.logo span{color:var(--gold)}
+.nav nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:600}
+.nav nav a:hover{color:var(--gold)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem}
+
+.hero{min-height:85vh;display:flex;align-items:center;padding:0 6%;
+  background:linear-gradient(rgba(58,13,13,.65),rgba(214,40,40,.35)),
+  url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600') center/cover,
+  linear-gradient(135deg,var(--red),var(--orange))}
+.hero-text{max-width:600px;color:#fff}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.15}
+.hero h1 span{color:var(--gold)}
+.hero p{margin:16px 0 26px;font-size:1.15rem}
+
+.btn{display:inline-block;padding:12px 26px;border:0;border-radius:30px;cursor:pointer;
+  background:var(--gold);color:var(--dark);font-weight:700;text-decoration:none;
+  font-size:1rem;transition:.3s}
+.btn:hover{transform:translateY(-3px);background:#fff}
+.btn-alt{background:transparent;color:#fff;border:2px solid var(--gold);margin-left:10px}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:18px;padding:40px 5%;margin-top:-50px;position:relative}
+.card{padding:26px;border-radius:16px;text-align:center;color:#fff;font-size:2rem;
+  box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.card h3{font-size:1.1rem;margin-top:8px}
+.card p{font-size:.9rem}
+.c1{background:var(--red)}.c2{background:var(--orange)}
+.c3{background:var(--green)}.c4{background:#8338ec}
+
+.section{padding:60px 5%;text-align:center}
+.section h2{font-size:2.2rem;color:var(--red);margin-bottom:24px;position:relative}
+.section h2::after{content:"";display:block;width:70px;height:4px;margin:8px auto 0;
+  background:var(--orange);border-radius:4px}
+
+.filters{margin-bottom:26px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.filter{padding:8px 20px;border:2px solid var(--orange);background:#fff;color:var(--orange);
+  border-radius:25px;font-weight:700;cursor:pointer;transition:.3s}
+.filter.active,.filter:hover{background:var(--orange);color:#fff}
+
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.dish{background:#fff;border-radius:18px;overflow:hidden;text-align:left;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);transition:.3s}
+.dish:hover{transform:translateY(-8px)}
+.dish img{width:100%;height:190px;object-fit:cover;
+  background:linear-gradient(135deg,var(--gold),var(--orange))}
+.info{padding:16px}
+.info p{color:#777;font-size:.9rem;margin:6px 0 10px}
+.info b{color:var(--red);font-size:1.15rem}
+
+.gallery-sec{background:linear-gradient(180deg,#ffe8c2,var(--cream))}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;transition:.4s;
+  background:linear-gradient(135deg,var(--red),var(--gold))}
+.gallery img:hover{transform:scale(1.05) rotate(-1deg)}
+
+.reserve{background:linear-gradient(135deg,var(--red),var(--orange))}
+.reserve h2{color:#fff}
+.form{max-width:420px;margin:auto;display:flex;flex-direction:column;gap:12px}
+.form input,.form select{padding:13px;border:0;border-radius:10px;font-size:1rem}
+#rMsg{color:#fff;font-weight:700;min-height:24px}
+
+footer{background:var(--dark);color:#fff;text-align:center;padding:36px 5%;line-height:1.9}
+footer h2{color:var(--gold)}
+footer small{color:#bbb}
+
+@media(max-width:700px){
+  .burger{display:block}
+  .nav nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    background:var(--red);padding:10px 5%}
+  .nav nav.open{display:flex}
+  .nav nav a{margin:10px 0}
+  .btn-alt{margin:10px 0 0}
+}// Mobile menu
+const burger = document.getElementById('burger');
+const links = document.getElementById('menuLinks');
+burger.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => links.classList.remove('open')));
+
+// Menu filter
+const filters = document.querySelectorAll('.filter');
+const dishes = document.querySelectorAll('.dish');
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filters.forEach(f => f.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    dishes.forEach(d => {
+      d.style.display = (cat === 'all' || d.dataset.cat === cat) ? 'block' : 'none';
+    });
+  });
+});
+
+// Reservation form
+document.getElementById('rDate').min = new Date().toISOString().split('T')[0];
+document.getElementById('rBtn').addEventListener('click', () => {
+  const name = document.getElementById('rName').value.trim();
+  const phone = document.getElementById('rPhone').value.trim();
+  const date = document.getElementById('rDate').value;
+  const guests = document.getElementById('rGuests').value;
+  const msg = document.getElementById('rMsg');
+  if (!name || !phone || !date) {
+    msg.textContent = '⚠️ Please fill in all fields.';
+    return;
+  }
+  msg.textContent = `✅ Thank you ${name}! Table for ${guests} booked on ${date}.`;
+});
